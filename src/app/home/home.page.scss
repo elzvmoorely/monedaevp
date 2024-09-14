@@ -1,0 +1,118 @@
+/* General container styling */
+.container {
+  display: flex;
+  flex-direction: column; /* Disposición vertical de los elementos */
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+  background: linear-gradient(135deg, #eaf2d7, #c7e5a3); /* Fondo degradado en tonos verdes */
+}
+
+/* Styling for ion-card */
+ion-card {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 15px; /* Bordes más redondeados */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más suave */
+  background: #ffffff; /* Fondo blanco para el card */
+  overflow: hidden; /* Para asegurar que no se desborde el contenido */
+  position: relative; /* Para posicionar elementos dentro del card */
+}
+
+/* Iconos decorativos dentro del card */
+ion-card:before {
+  content: url('/assets/coin-icon.png'); /* Ejemplo de icono de moneda, asegúrate de tener el archivo en tu proyecto */
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  opacity: 0.5;
+}
+
+/* Styling for card content and form elements */
+ion-card-header {
+  background: #096829; /* Color de fondo del encabezado del card */
+  color: #ffffff; /* Color del texto del encabezado */
+  padding: 15px; /* Padding para el encabezado */
+  border-bottom: 2px solid #ffffff; /* Línea blanca en la parte inferior */
+  position: relative;
+}
+
+ion-card-title {
+  font-size: 1.5em; /* Tamaño del texto más grande */
+  font-weight: bold; /* Texto en negrita */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Agregar un icono de dinero junto al título */
+ion-card-title:before {
+  content: url('/assets/dollar-icon.png'); /* Icono de dólar, asegúrate de tener el archivo en tu proyecto */
+  margin-right: 8px;
+  width: 24px;
+  height: 24px;
+}
+
+/* Styling for input fields */
+ion-input {
+  padding: 10px;
+  border-radius: 8px;
+  background: #ffffff; /* Fondo blanco para los inputs */
+  color: #333333; /* Texto en color gris oscuro para contraste */
+  border: 1px solid #cccccc; /* Borde gris claro */
+}
+
+/* Styling for select elements */
+ion-select {
+  padding: 10px;
+  border-radius: 8px;
+  background: #ffffff; /* Fondo blanco para los selectores */
+  color: #333333; /* Texto en color gris oscuro para contraste */
+  border: 1px solid #cccccc; /* Borde gris claro */
+}
+
+/* Button styling */
+.convert-button {
+  margin-top: 20px;
+  background-color: #2fe782; /* Color de fondo del botón */
+  color: #ffffff; /* Color del texto del botón */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 12px 0; /* Padding vertical para el botón */
+}
+
+/* Result styling */
+.result-item {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.result-value {
+  font-size: 1.4em; /* Tamaño de texto del resultado más grande */
+  font-weight: bold;
+  color: #d1a926; /* Color del resultado */
+}
+
+/* Animation for a subtle bounce effect */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+ion-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8em; /* Tamaño de fuente mayor para el título */
+  font-weight: bold; /* Negrita para el título */
+}
+
+/* Agregar un icono de moneda al título */
+ion-title:before {
+  content: url('/assets/currency-icon.png'); /* Icono de moneda, asegúrate de tener el archivo en tu proyecto */
+  margin-right: 8px;
+  width: 24px;
+  height: 24px;
+}

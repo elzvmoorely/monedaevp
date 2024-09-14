@@ -1,0 +1,56 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="tertiary">
+    <ion-title class="ion-text-center">
+      GlobalRates 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="container alt-container">
+    <ion-card class="custom-card">
+      <ion-card-header>
+        <ion-card-title class="ion-text-center">Convierte entre MXN, EUR y KRW</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <!-- Cantidad a convertir -->
+        <ion-item>
+          <ion-label position="stacked">CANTIDAD</ion-label>
+          <ion-input type="number" [(ngModel)]="amount" placeholder="Ingresa el monto"></ion-input>
+        </ion-item>
+
+        <!-- Selección de moneda origen -->
+        <ion-item>
+          <ion-label position="stacked">VALOR</ion-label>
+          <ion-select [(ngModel)]="fromCurrency" interface="popover">
+            <ion-select-option value="MXN">Peso Mexicano (MXN)</ion-select-option>
+            <ion-select-option value="EUR">Euro (EUR)</ion-select-option>
+            <ion-select-option value="KRW">Won Coreano (KRW)</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <!-- Selección de moneda destino -->
+        <ion-item>
+          <ion-label position="stacked">VALOR 2</ion-label>
+          <ion-select [(ngModel)]="toCurrency" interface="popover">
+            <ion-select-option value="MXN">Peso Mexicano (MXN)</ion-select-option>
+            <ion-select-option value="EUR">Euro (EUR)</ion-select-option>
+            <ion-select-option value="KRW">Won Coreano (KRW)</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <!-- Botón de conversión -->
+        <ion-button expand="full" color="tertiary" (click)="convert()">
+          CONVERTIR
+        </ion-button>
+
+        <!-- Mostrar resultado -->
+        <ion-item *ngIf="result" class="result-item ion-text-center">
+          <ion-label>
+            <h3>RESULTADO: {{ result | number:'1.2-2' }} {{ toCurrency }}</h3>
+          </ion-label>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
